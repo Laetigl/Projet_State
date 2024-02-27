@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import "./Personnal.css"
 
 export default function Personal(props) {
     const [searchTermName, setSearchTermName] = useState('');
@@ -34,7 +35,7 @@ export default function Personal(props) {
             </label>
             <label className='flex flex-col gap-[5px]'>
                  <p className='text-[#02295a] font-bold text-[14px]'>Your phone number is : {searchTermPhone}</p>
-                <input name="postContent" type="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" cols="30" rows="10" className='p-[10px] border border-[#9699ab] rounded-xl h-[40px] text-[#d6d9e6] text-[10px]' value={searchTermPhone} onChange={(e) => handleSearchPhone(e)}>
+                <input name="postContent" type="number" cols="30" rows="10" className='inputNbr p-[10px] border border-[#9699ab] rounded-xl h-[40px] text-[#d6d9e6] text-[10px]' value={searchTermPhone} onChange={(e) => handleSearchPhone(e)}>
                 </input>
             </label>
         </div>
