@@ -39,9 +39,11 @@ export default function Personal(props) {
                 </input>
             </label>
         </div>
-        <button onClick={() => props.setButtonStep("selectplan")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl absolute top-[86%] right-[27%]'>
-        Next Step
-        </button>
+        <div className='flex  justify-end items-end pt-[30px]'>
+            <button onClick={() => props.setButtonStep("selectplan")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl'>
+            Next Step
+            </button>
+        </div>
         
     </div>
   )

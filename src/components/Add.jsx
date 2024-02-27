@@ -9,31 +9,31 @@ export default function Add(props) {
         </div> 
 
         <div className='flex flex-col gap-[15px]'>
-            <div className='w-[100%] h-[100px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl'>
-                <input type="checkbox" defaultChecked className="checkbox" />
+            <div className='hover:border-[#bb00ff] w-[100%] h-[100px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl'>
+                <input type="checkbox" className="checkbox" />
                 <div className=' w-[70%]'>
                     <h1 className='text-[#02295a] font-bold text-[18px]'>Online service</h1>
                     <p className='text-[#9699ab] text-[13px]'>Acces to multiplayer games</p>
                 </div>
-                <p className='text-[#741d96] pe-[20px]'>+$10/yr</p>
+                <p className='text-[#741d96] pe-[20px]'>{props.monthlyPrice? "$10/yr": "$1/mo"}</p>
             </div>
 
-            <div className='w-[100%] h-[100px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl'>
-                <input type="checkbox" defaultChecked className="checkbox" />
+            <div className='hover:border-[#bb00ff] w-[100%] h-[100px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl'>
+                <input type="checkbox" className="checkbox" />
                 <div className=' w-[70%]'>
                     <h1 className='text-[#02295a] font-bold text-[18px]'>Larger storage service</h1>
                     <p className='text-[#9699ab] text-[13px]'>Extra 1TB of cloud save</p>
                 </div>
-                <p className='text-[#741d96] pe-[20px]'>+$20/yr</p>
+                <p className='text-[#741d96] pe-[20px]'>{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
             </div>
 
-            <div className='w-[100%] h-[100px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl'>
-                <input type="checkbox" defaultChecked className="checkbox" />
+            <div className='hover:border-[#bb00ff] w-[100%] h-[100px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl'>
+                <input type="checkbox" className="checkbox" />
                 <div className=' w-[70%]'>
                     <h1 className='text-[#02295a] font-bold text-[18px]'>Customizable Profile</h1>
                     <p className='text-[#9699ab] text-[13px]'>Custom theme on your profile</p>
                 </div>
-                <p className='text-[#741d96] pe-[20px]'>+$20/yr</p>
+                <p className='text-[#741d96] pe-[20px]'>{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
             </div>
         </div>
 
@@ -41,7 +41,7 @@ export default function Add(props) {
         <button onClick={() => props.setButtonStep("selectplan")} className='border border-[#02295a] text-[#02295a] w-[100px] p-[10px] rounded-xl absolute top-[86%] left-[41%]'>
         Go back 
         </button>
-        <button onClick={() => props.setButtonStep("sumary")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl absolute top-[86%] right-[27%]'>
+        <button onClick={() => props.setButtonStep("sumary")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl absolute top-[86%] right-[16%]'>
         Next Step
         </button>
     </div>
