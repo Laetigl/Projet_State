@@ -10,31 +10,46 @@ export default function Sumary(props) {
 
         <div className='bg-[#f0f6ff] w-[100%] h-[200px] p-[20px] gap-[50px]' >
           <div className='flex'>
-            <div className='flex flex-col w-[80%] items-start'>
-              <h1 className='font-bold'>{props.selectedPlan}</h1>
+            <div className='flex flex-col w-[90%] items-start'>
+              <h1 className='font-bold'>{props.selectedPlan.charAt(0).toUpperCase() + props.selectedPlan.slice(1)} ({props.monthlyPrice? "yearly": "monthly"})
+              </h1>
               <button className='text-[#9699ab] text-[12px] pb-[10px] underline' onClick={() => props.setButtonStep("selectplan")}>Change</button>
             </div> 
-            <p className='w-[20%]'>$90/yr</p>
+            <p className='w-[5%]'>${props.priceSelected}</p>
           </div>
 
             <hr />
             
           <div className='flex flex-col gap-[10px] pt-[20px]'>
             <div className='flex'>
-              <p className='text-[#9699ab] text-[12px] w-[80%]'>Online service</p>
-              <p className='w-[20%]'>$10/yr</p>
+              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addOnline?"Online":""}</p>
+              {props.addOnline?
+                <p className='w-[5%]'>{props.monthlyPrice? "$10/yr": "$1/mo"}</p>
+                :null
+              }
             </div> 
 
             <div className='flex'>
-              <p className='text-[#9699ab] text-[12px] w-[80%]'>Customizable profile</p>
-              <p className='w-[20%]'>$20/yr</p>
+              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addStorage?"Storage":""}</p>
+              {props.addStorage?
+                <p className='w-[5%]'>{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
+                :null
+              }
+            </div> 
+
+            <div className='flex'>
+              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addCustom?"Custom":""}</p>
+              {props.addCustom?
+                <p className='w-[5%]'>{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
+                :null
+              }
             </div> 
           </div>
 
         </div>
         <div className='flex gap-[40px] w-[100%] text-[#9699ab]'>
           <h1 className='w-[80%]'>Total (per year)</h1>
-          <p className='w-[20%] justify-center items-center text-center font-bold text-[#473dff]'>{}/yr</p>
+          <p className='w-[20%] justify-center items-center text-center font-bold text-[#473dff]'>${props.priceSelected + props.totalPriceOne+props.totalPriceTwo+props.totalPriceThree}/yr</p>
         </div>
 
         <div className='flex gap-[300px] pt-[30px]'>

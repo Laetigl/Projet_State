@@ -23,24 +23,26 @@ export default function Personal(props) {
             <p className='text-[15px] text-[#9699ab] pb-[20px]'>Please provide your name, email address and phone number.</p>
         </div>
         <div className='flex flex-col gap-[20px]'>
-            <label className='flex flex-col'>
-                 <p className='text-bold'>Your name is : {searchTermName}</p>
+            <label className='flex flex-col gap-[5px]'>
+                 <p className='text-[#02295a] font-bold text-[14px]'>Your name is : {searchTermName}</p>
                 <input name="postContent" cols="30" rows="10" className='p-[10px] border border-[#9699ab] rounded-xl h-[40px] text-[#d6d9e6] text-[10px]' type="text" value={searchTermName} onChange={(e) => handleSearchName(e)}>
                 </input>
             </label>
-            <label className='flex flex-col'>
-                 <p className='text-bold'>Your email is : {searchTermMail}</p>
+            <label className='flex flex-col gap-[5px]'>
+                 <p className='text-[#02295a] font-bold text-[14px]'>Your email is : {searchTermMail}</p>
                 <input name="postContent" cols="30" rows="10"  className='p-[10px] border border-[#9699ab] rounded-xl h-[40px] text-[#d6d9e6] text-[10px]' type="text" value={searchTermMail} onChange={(e) => handleSearchMail(e)}>
                 </input>
             </label>
-            <label className='flex flex-col'>
-                 <p className='text-bold'>Your phone number is : {searchTermPhone}</p>
+            <label className='flex flex-col gap-[5px]'>
+                 <p className='text-[#02295a] font-bold text-[14px]'>Your phone number is : {searchTermPhone}</p>
                 <input name="postContent" cols="30" rows="10" className='p-[10px] border border-[#9699ab] rounded-xl h-[40px] text-[#d6d9e6] text-[10px]' type="text" value={searchTermPhone} onChange={(e) => handleSearchPhone(e)}>
                 </input>
             </label>
         </div>
-        <div className='flex  justify-end items-end pt-[30px]'>
-            <button onClick={() => props.setButtonStep("selectplan")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl'>
+        <div className='flex gap-[300px] pt-[68px] ps-[400px]'>
+            <button 
+            disabled={searchTermName === "" && searchTermMail==="" && searchTermPhone===""}
+            onClick={() => props.setButtonStep("selectplan")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl'>
             Next Step
             </button>
         </div>
