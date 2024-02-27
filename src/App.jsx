@@ -63,7 +63,7 @@ function App() {
   }, [addOnline,addStorage,addCustom,monthlyPrice])
 
   return (
-    <div className='lg:w-[900px] md:w-[500px] lg:h-[550px] w-[350px] bg-white rounded-xl p-[10px] flex gap-[20px] flex-wrap lg:flex-nowrap'>
+    <div className='lg:w-[900px] md:w-[500px] lg:h-[550px] md:pb-[20px] w-[350px] bg-white rounded-xl p-[10px] flex gap-[20px] md:gap-[40px] lg:gap-[5px] flex-wrap lg:flex-nowrap md:items-center md:justify-center items-center justify-center'>
       <Sidebar buttonStep={buttonStep}></Sidebar>
       {/* Affichage de la 1e page ci-dessous */}
       {buttonStep === "change" && <Personal setButtonStep={setButtonStep}></Personal>}
