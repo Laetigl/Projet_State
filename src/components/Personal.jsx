@@ -15,7 +15,6 @@ export default function Personal(props) {
         setSearchTermPhone(e.target.value);
     };
 
-
   return (
     <div className='flex flex-col gap-[28px] md:items-center items-center justify-center lg:w-[70%] w-[100%] '>
         <div className='w-[100%] md:w-[500px] flex flex-col justify-center items-center pt-[25px] md:items-center'>
