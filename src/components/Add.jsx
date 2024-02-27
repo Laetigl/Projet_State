@@ -37,13 +37,10 @@ export default function Add(props) {
             </div>
         </div>
 
-
-        <button onClick={() => props.setButtonStep("selectplan")} className='border border-[#02295a] text-[#02295a] w-[100px] p-[10px] rounded-xl absolute top-[86%] left-[41%]'>
-        Go back 
-        </button>
-        <button onClick={() => props.setButtonStep("sumary")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl absolute top-[86%] right-[16%]'>
-        Next Step
-        </button>
+        <div className='flex gap-[300px] pt-[30px]'>
+            <button onClick={() => props.setButtonStep("selectplan")} className='border border-[#02295a] text-[#02295a] w-[100px] p-[10px] rounded-xl'>Go back </button>
+            <button onClick={() => props.setButtonStep("sumary")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl'>Next Step</button>
+        </div>
     </div>
   )
 }
