@@ -22,7 +22,7 @@ export default function Sumary(props) {
             
           <div className='flex flex-col gap-[10px] pt-[20px] md:pt-[10px]'>
             <div className='flex'>
-              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addOnline?"Online":""}</p>
+              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addOnline?"Online service":""}</p>
               {props.addOnline?
                 <p className='w-[5%]'>{props.monthlyPrice? "$10/yr": "$1/mo"}</p>
                 :null
@@ -30,7 +30,7 @@ export default function Sumary(props) {
             </div> 
 
             <div className='flex'>
-              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addStorage?"Storage":""}</p>
+              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addStorage?"Larger Storage":""}</p>
               {props.addStorage?
                 <p className='w-[5%]'>{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
                 :null
@@ -38,7 +38,7 @@ export default function Sumary(props) {
             </div> 
 
             <div className='flex'>
-              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addCustom?"Custom":""}</p>
+              <p className='text-[#9699ab] text-[12px] w-[90%]'>{props.addCustom?"Customizable Profile":""}</p>
               {props.addCustom?
                 <p className='w-[5%]'>{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
                 :null

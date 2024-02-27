@@ -48,17 +48,20 @@ function App() {
 
   // partie "sumary" : useEffect va convertir les strings en nombres au niveau des adds-on
   useEffect(()=> {
+  // Remettre à zéro les valeurs sinon elles vont être sauvegardées si on décoche notre choix
+    setTotalPriceOne(0)
+    setTotalPriceTwo(0)
+    setTotalPriceThree(0)
     if (addOnline) {
       setTotalPriceOne(monthlyPrice?10:1)
     }
     if (addStorage) {
       setTotalPriceTwo(monthlyPrice?20:2)
-
     }
     if (addCustom) {
       setTotalPriceThree(monthlyPrice?20:2)
-
     }
+    // Les variables mises dans le tableau de dépendance vont être regardées quand il y a un changement dessus (ex. ici "addOnline" est "false" => dès qu'on va le passer à "true" en cliquant dessus alors le useEffect va être lu)
   }, [addOnline,addStorage,addCustom,monthlyPrice])
 
   return (
