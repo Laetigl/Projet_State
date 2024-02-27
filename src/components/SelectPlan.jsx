@@ -5,13 +5,13 @@ import pro from "../assets/images/icon-pro.svg"
 
 export default function SelectPlan(props) {
   return (
-    <div className='flex flex-col gap-[20px] '>
-        <div className='w-[100%] flex flex-col justify-center items-start pt-[25px]'>
+    <div className='flex flex-col gap-[20px] md:items-center'>
+        <div className='w-[100%] flex flex-col justify-center items-start md:items-center pt-[25px]'>
             <h1 className='text-[30px] text-[#02295a] font-bold'>Select your plan</h1>
             <p className='text-[15px] text-[#9699ab] pb-[20px]'>You have the option of monthly or early billing</p>
         </div>
 
-        <div className='flex gap-[10px]'>
+        <div className='flex gap-[10px] md:w-[400px]'>
             <button className={`flex flex-col justify-center gap-[30px] p-[10px] w-[170px] h-[180px] border border-black rounded-xl cursor-pointer hover:border-[#bb00ff] ${props.selectedPlan == "arcade"? "bg-[#d6d9e6] border border-[#bb00ff]":"bg-transparent"}`} onClick={() => props.setSelectedPlan("arcade")}>
                 <img className="w-[40px]" src={arcade} alt=""/>
                 <div className='flex flex-col'>
@@ -35,7 +35,7 @@ export default function SelectPlan(props) {
                 </div>
             </button>
         </div>
-        <div className='flex w-[100%] h-[50px] bg-[#f0f6ff] justify-center items-center gap-[70px]'>
+        <div className='flex w-[100%] md:w-[400px] h-[50px] bg-[#f0f6ff] justify-center items-center gap-[70px]'>
             <p className={`${props.monthlyPrice?"text-[#9699ab]":""}`}>Monthly</p>
             <input type="checkbox" id ="checkbox" className="toggle bg-slate-600" checked={props.monthlyPrice} onChange={props.checkhandler}/>
             <p className={`${props.monthlyPrice?"":"text-[#9699ab]"}`}>Yearly</p>

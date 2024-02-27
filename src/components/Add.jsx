@@ -2,13 +2,13 @@ import React from 'react'
 
 export default function Add(props) {
   return (
-    <div className='w-[500px] flex flex-col gap-[20px] '>
-        <div className='flex flex-col justify-center items-start pt-[25px]'>
+    <div className='w-[500px] flex flex-col gap-[20px] md:w-[500px] md:items-center'>
+        <div className='flex flex-col justify-center items-start pt-[25px] md:items-center'>
             <h1 className='text-[30px] text-[#02295a] font-bold'>Pick add-ons</h1>
             <p className='text-[15px] text-[#9699ab] pb-[20px]'>Add-ons help enhance your gaming experience</p>
         </div> 
 
-        <div className='flex flex-col gap-[15px]'>
+        <div className='flex flex-col gap-[15px] md:w-[400px]'>
             <div className={`hover:border-[#bb00ff] w-[100%] h-[80px] border border-[#9699ab] flex gap-[40px] p-[10px] justify-center items-center rounded-xl ${props.addOnline == "online"? "bg-[#d6d9e6] border border-[#bb00ff]":"bg-transparent"}`}>
                 <input type="checkbox" className="checkbox" checked={props.addOnline} onClick={() => props.setAddOnline(!props.addOnline)}/>
                 <div className=' w-[70%]'>
