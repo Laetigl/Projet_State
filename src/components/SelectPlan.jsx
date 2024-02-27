@@ -5,7 +5,7 @@ import pro from "../assets/images/icon-pro.svg"
 
 export default function SelectPlan(props) {
   return (
-    <div className='flex flex-col lg:gap-[20px] gap-[50px]  md:items-center md:gap-[12px] lg:w-[65%] w-[90%]'>
+    <div className='flex flex-col lg:gap-[20px] gap-[50px]  md:items-center md:gap-[12px] lg:w-[70%] w-[90%]'>
         <div className='w-[100%] flex flex-col justify-center items-center md:items-center pt-[25px] md:w-[500px] md:pt-[5px] text-center'>
             <h1 className='text-[30px] text-[#02295a] font-bold'>Select your plan</h1>
             <p className='lg:text-[15px] md:text-[15px] text-[12px] text-[#9699ab] lg:pb-[20px] md:pb-[20px]'>You have the option of monthly or early billing</p>
@@ -41,7 +41,7 @@ export default function SelectPlan(props) {
             <p className={`ps-[7px] text-[13px] ${props.monthlyPrice?"":"text-[#9699ab]"}`}>Yearly</p>
         </div>
 
-        <div className='flex lg:gap-[220px] lg:pt-[30px] md:gap-[200px] gap-[100px] justify-center lg:pb-0 md:pb-0 pb-[10px] '>
+        <div className='flex lg:gap-[220px] lg:pt-[35px] md:gap-[200px] gap-[100px] justify-center lg:pb-0 md:pb-0 pb-[10px] '>
             <button 
                 onClick={() => props.setButtonStep("change")} 
                 className='border border-[#02295a] text-[#02295a] lg:w-[100px] w-[100px] p-[10px] rounded-xl'>Go back </button>

@@ -38,7 +38,7 @@ export default function Add(props) {
             </div>
         </div>
 
-        <div className='flex lg:gap-[220px] lg:pt-[30px] md:gap-[200px] gap-[100px] pt-[10px] lg:pb-0 md:pb-0 pb-[10px] '>
+        <div className='flex lg:gap-[220px] gap-[100px] lg:pt-[68px] pt-[20px] lg:pb-0 md:pb-0 pb-[10px]'>
             <button 
                 onClick={() => props.setButtonStep("selectplan")} 
                 className='border border-[#02295a] text-[#02295a] w-[100px] p-[10px] rounded-xl'>Go back </button>

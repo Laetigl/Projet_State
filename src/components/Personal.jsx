@@ -17,7 +17,7 @@ export default function Personal(props) {
 
 
   return (
-    <div className='flex flex-col gap-[28px] md:items-center items-center justify-center lg:w-[65%] w-[100%] '>
+    <div className='flex flex-col gap-[28px] md:items-center items-center justify-center lg:w-[70%] w-[100%] '>
         <div className='w-[100%] md:w-[500px] flex flex-col justify-center items-center pt-[25px] md:items-center'>
             <h1 className='text-[30px] text-[#02295a] font-bold'>Personal info</h1>
             <p className='lg:text-[15px] md:text-[15px] text-[11px] text-[#9699ab] pb-[20px] text-center '>Please provide your name, email address and phone number.</p>
@@ -39,9 +39,10 @@ export default function Personal(props) {
                 </input>
             </label>
         </div>
-        <div className='flex gap-[300px] lg:pt-[68px] lg:ps-[400px] pt-[20px] lg:pb-0 md:pb-0 pb-[10px] '>
+        <div className='flex gap-[300px] lg:pt-[15px] lg:ps-[320px] pt-[20px] lg:pb-0 md:pb-0 pb-[10px] '>
             <button 
-            disabled={searchTermName === "" && searchTermMail==="" && searchTermPhone===""}
+            // Mettre dans la propriété "disabled" que chaque barre de cherche 
+            disabled={searchTermName === "" || searchTermMail==="" || searchTermPhone===""}
             onClick={() => props.setButtonStep("selectplan")} className='bg-[#02295a] text-white w-[100px] p-[10px] rounded-xl'>
             Next Step
             </button>

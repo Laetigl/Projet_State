@@ -15,12 +15,11 @@ function App() {
   const checkhandler =() =>{
       setMonthlyPrice(!monthlyPrice)
   }
-  //Partie "plan sélectionné"
+  //PARTIE "SelectPlan"
   const[selectedPlan, setSelectedPlan] = useState("")
-  console.log(selectedPlan);
   const[priceSelected, setPriceSelected] = useState("")
 
-  //UseEffect va permettre de combiner les différents changements selon le plan tarifaire choisi
+  //page SelectPlan : useEffect va permettre de combiner les différents changements selon le plan tarifaire choisi et ici on convertit en integer (retirer les "" des strings)
   useEffect(()=> {
     if(selectedPlan =="arcade")
       setPriceSelected(monthlyPrice?90:9);
@@ -34,20 +33,20 @@ function App() {
   const[planPick, setPlanPick] = useState("")
   const[sumaryPlan, setSumaryPlan]=useState("")
 
-  //Partie Add-ons
+  //Partie "ADD-ONS"
   const[selectedAdd,setSelectedAdd] = useState("")
   const[addOn,setAddOn] = useState("")
-
+  // créer 3 useState pour chaque ajout disponible
   const[addOnline, setAddOnline]= useState(false)
   const[addStorage, setAddStorage]= useState(false)
   const[addCustom, setAddCustom]= useState(false)
 
+  //Partie "SUMARY" pour le prix total
   const[totalPriceOne, setTotalPriceOne] = useState("")
   const[totalPriceTwo, setTotalPriceTwo] = useState("")
   const[totalPriceThree, setTotalPriceThree] = useState("")
 
-
-  //UseEffect : pour convertir les strings en nombres au niveau des adds-on
+  // partie "sumary" : useEffect va convertir les strings en nombres au niveau des adds-on
   useEffect(()=> {
     if (addOnline) {
       setTotalPriceOne(monthlyPrice?10:1)
@@ -65,7 +64,7 @@ function App() {
   return (
     <div className='lg:w-[900px] md:w-[500px] lg:h-[550px] md:pb-[20px] w-[350px] bg-white rounded-xl p-[10px] flex gap-[20px] md:gap-[40px] lg:gap-[5px] flex-wrap lg:flex-nowrap md:items-center md:justify-center items-center justify-center'>
       <Sidebar buttonStep={buttonStep}></Sidebar>
-      {/* Affichage de la 1e page ci-dessous */}
+      {/* Affichage de la 1e page avec la ligne ci-dessous*/}
       {buttonStep === "change" && <Personal setButtonStep={setButtonStep}></Personal>}
 
       {buttonStep === "selectplan" && <SelectPlan setButtonStep={setButtonStep} choice={choice} monthlyPrice={monthlyPrice} setChoice={setChoice} checkhandler={checkhandler} selectedPlan={selectedPlan} 
