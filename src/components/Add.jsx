@@ -9,7 +9,7 @@ export default function Add(props) {
         </div> 
 
         <div className='flex flex-col gap-[15px] md:w-[400px]'>
-            <div className={`hover:border-[#bb00ff] w-[100%] h-[70px] border border-[#9699ab] flex lg:gap-[40px] md:gap-[40px] gap-[20px] p-[10px] md:p-[7px] justify-center items-center rounded-xl ${props.addOnline == "online"? "bg-[#d6d9e6] border border-[#bb00ff]":"bg-transparent"}`}>
+            <div className={`hover:border-[#bb00ff] w-[100%] h-[70px] border border-[#9699ab] flex lg:gap-[40px] md:gap-[40px] gap-[20px] p-[10px] md:p-[7px] justify-center items-center rounded-xl ${props.addOnline == "online"? "bg-[#9699ab] border border-[#bb00ff]":"bg-transparent"}`}>
                 <input type="checkbox" className="checkbox md:ms-[14px]" 
                 checked={props.addOnline} onClick={() => props.setAddOnline(!props.addOnline)}/>
                 <div className=' w-[80%]'>
@@ -19,7 +19,7 @@ export default function Add(props) {
                 <p className='text-[#741d96] pe-[20px] lg:text-[13px] md:text-[13px] text-[10px]'>+{props.monthlyPrice? "$10/yr": "$1/mo"}</p>
             </div>
 
-            <div className={`hover:border-[#bb00ff] w-[100%] h-[70px] border border-[#9699ab] flex lg:gap-[40px] md:gap-[40px] gap-[20px] p-[10px] md:p-[7px] justify-center items-center rounded-xl ${props.addStorage == "storage"? "bg-[#d6d9e6] border border-[#bb00ff]":"bg-transparent"}`}>
+            <div className={`hover:border-[#bb00ff] w-[100%] h-[70px] border border-[#9699ab] flex lg:gap-[40px] md:gap-[40px] gap-[20px] p-[10px] md:p-[7px] justify-center items-center rounded-xl ${props.addStorage == "storage"? "bg-[#9699ab] border border-[#bb00ff]":"bg-transparent"}`}>
                 <input type="checkbox" className="checkbox md:ms-[14px]" checked={props.addStorage} onClick={() => props.setAddStorage(!props.addStorage)}/>
                 <div className=' w-[70%]'>
                     <h1 className='text-[#02295a] font-bold lg:text-[18px] md:text-[18px] text-[15px]'>{props.addOn?"":"Larger storage service"}</h1>
@@ -28,7 +28,7 @@ export default function Add(props) {
                 <p className='text-[#741d96] pe-[20px] lg:text-[13px] md:text-[13px] text-[10px]'>+{props.monthlyPrice? "$20/yr": "$2/mo"}</p>
             </div>
 
-            <div className={`hover:border-[#bb00ff] w-[100%] h-[70px] border border-[#9699ab] flex lg:gap-[40px] md:gap-[40px] gap-[20px] p-[10px] md:p-[7px] justify-center items-center rounded-xl ${props.addCustom == "custom"? "bg-[#d6d9e6] border border-[#bb00ff]":"bg-transparent"}`}>
+            <div className={`hover:border-[#bb00ff] w-[100%] h-[70px] border border-[#9699ab] flex lg:gap-[40px] md:gap-[40px] gap-[20px] p-[10px] md:p-[7px] justify-center items-center rounded-xl ${props.addCustom == "custom"? "bg-[#9699ab] border border-[#bb00ff]":"bg-transparent"}`}>
                 <input type="checkbox" className="checkbox md:ms-[14px]" checked={props.addCustom} onClick={() => props.setAddCustom(!props.addCustom)}/>
                 <div className=' w-[70%]'>
                     <h1 className='text-[#02295a] font-bold lg:text-[18px] md:text-[18px] text-[15px]'>{props.addOn?"":"Customizable Profile"}</h1>
